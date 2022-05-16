@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  web:
+    image: jra2605/api-mongo
+    build: .
+    ports:
+      - "8000:4000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_ENV: development
